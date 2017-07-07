@@ -39,10 +39,11 @@ class Provider {
     static let sharedInstance = Provider()
     fileprivate let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "super.ba")
     var alamofireManager: SessionManager?
-    
+
+    // Yes, these actually work.
     let oauth2 = OAuth2ClientCredentials(settings: [
-        "client_id": "contact me if you need one",
-        "client_secret": "contact me if you need one",
+        "client_id": "5952144f7e664a87a18c158b_2fpcotn1f8n4so8oo8s4gwg8ogsgk8g48oksc044s0o4k0kow0",
+        "client_secret": "34vrb64rxx8g8kc8s4ck8s4wocc4kcgkws4cookcocog0k8gcw",
         "token_uri": "https://super.ba/oauth/v2/token",
         "scope": "user",
         "secret_in_body": false,
