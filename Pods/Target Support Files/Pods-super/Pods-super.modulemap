@@ -1,0 +1,6 @@
+framework module Pods_super {
+  umbrella header "Pods-super-umbrella.h"
+
+  export *
+  module * { export * }
+}

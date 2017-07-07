@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  super
+
+  Created by Aid Arslanagic on 28/06/2017.
+  Copyright © 2017 Simpastudio. All rights reserved.
+*/
+
+///// Articles View Controller /////
+
+//Navigation Title
+"ArticlesVcTitle" = "Novosti";
+
+///// Article ViewController /////
+"published.by_source.at_date" = "Objavio %@ na %@";
+
+///// Alerts /////
+"Network Error" = "Mrežni problem";
+"Please try again" = "Molimo pokušajte ponovo";

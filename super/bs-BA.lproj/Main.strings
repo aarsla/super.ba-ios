@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Glumac Armin Omerović jučer se trebao vratio u Sarajevo iz Zagreba, gdje je proteklih sedam dana snimao film &bdquo;General\" u režiji Antuna Vrdoljaka. Atmosferu sa snimanja Omerović je u nekoliko navrata podijelio i s prijateljima na društvenim mrežama. U razgovoru za &bdquo;Dnevni avaz\" poručio je da mu je velika čast bila glumiti rame uz rame s holivudskom zvijez... "; ObjectID = "50Z-k8-Nd9"; */
+"50Z-k8-Nd9.text" = "Glumac Armin Omerović jučer se trebao vratio u Sarajevo iz Zagreba, gdje je proteklih sedam dana snimao film &bdquo;General\" u režiji Antuna Vrdoljaka. Atmosferu sa snimanja Omerović je u nekoliko navrata podijelio i s prijateljima na društvenim mrežama. U razgovoru za &bdquo;Dnevni avaz\" poručio je da mu je velika čast bila glumiti rame uz rame s holivudskom zvijezdom.";
+
+/* Class = "UIBarButtonItem"; title = "Izvori"; ObjectID = "I2z-fA-nM2"; */
+"I2z-fA-nM2.title" = "Izvori";
+
+/* Class = "UINavigationItem"; title = "Novosti"; ObjectID = "Qgk-dG-lY5"; */
+"Qgk-dG-lY5.title" = "Novosti";
+
+/* Class = "UILabel"; text = "Objavio izvor.ba 16.06.2017. godine u 13:35"; ObjectID = "TFw-VC-SC9"; */
+"TFw-VC-SC9.text" = "Objavio izvor.ba 16.06.2017. godine u 13:35";
+
+/* Class = "UILabel"; text = "RADIO SARAJEVO"; ObjectID = "YCG-GD-p6d"; */
+"YCG-GD-p6d.text" = "IZVOR NOVOSTI";
+
+/* Class = "UILabel"; text = "Usvojen krivični zakon RS: Zaštita za \"zvizdače\", pomilovanje nakon odslužene dvije trećine kazne"; ObjectID = "ZCV-rr-Ani"; */
+"ZCV-rr-Ani.text" = "Usvojen krivični zakon RS: Zaštita za \"zvizdače\", pomilovanje nakon odslužene dvije trećine kazne";
+
+/* Class = "UIBarButtonItem"; title = "Na vrh"; ObjectID = "dZJ-QO-bcn"; */
+"dZJ-QO-bcn.title" = "Na vrh";
+
+/* Class = "UISearchBar"; placeholder = "Pretraga naslova"; ObjectID = "fNW-Qe-5Lw"; */
+"fNW-Qe-5Lw.placeholder" = "Pretraga naslova";
+
+/* Class = "UILabel"; text = "Jun 15 2017, 3:55"; ObjectID = "jYh-lT-IHw"; */
+"jYh-lT-IHw.text" = "Jun 15 2017, 3:55";
+
+/* Class = "UILabel"; text = "Izvor vijesti"; ObjectID = "mKT-HF-jki"; */
+"mKT-HF-jki.text" = "Izvor vijesti";
+
+/* Class = "UIButton"; normalTitle = "Nazad"; ObjectID = "ndt-Ic-2tw"; */
+"ndt-Ic-2tw.normalTitle" = "Nazad";
+
+/* Class = "UIButton"; normalTitle = "Pročitaj"; ObjectID = "nwu-Vw-Ai3"; */
+"nwu-Vw-Ai3.normalTitle" = "Pročitaj";
+
+/* Class = "UINavigationItem"; title = "Izvori"; ObjectID = "v0z-el-VmJ"; */
+"v0z-el-VmJ.title" = "Izvori";
+
+/* Class = "UILabel"; text = "Drama na nebu iznad Prištine: Zavladala je panika, čuli su se vrsci i širio se gust crni dim"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Drama na nebu iznad Prištine: Zavladala je panika, čuli su se vrsci i širio se gust crni dim";

@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - FontAwesome.swift (1.2.0)
+  - Kingfisher (3.10.2)
+  - ObjectMapper (2.2.7)
+  - p2.OAuth2 (3.0.3)
+  - ReachabilitySwift (3)
+  - SlideMenuControllerSwift (3.0.1)
+  - Starscream (2.0.4)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityIndicator (~> 2.2)
+  - AlamofireObjectMapper (~> 4.0)
+  - FontAwesome.swift
+  - Kingfisher (~> 3.0)
+  - p2.OAuth2 (~> 3.0)
+  - ReachabilitySwift (~> 3)
+  - SlideMenuControllerSwift
+  - Starscream (~> 2.0.3)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
+  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  p2.OAuth2: 63d8d3e366ac2c43bfe8bfa13b42cfeb908c314e
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  Starscream: df5974ee928b157c8eda8af8de7c620276b7dfcc
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: fb2e6b733c68b1bfbd0172809c326ad7e2fe609b
+
+COCOAPODS: 1.2.1
