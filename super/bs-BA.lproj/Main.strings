@@ -40,3 +40,9 @@
 
 /* Class = "UILabel"; text = "Drama na nebu iznad Prištine: Zavladala je panika, čuli su se vrsci i širio se gust crni dim"; ObjectID = "zEq-FU-wV5"; */
 "zEq-FU-wV5.text" = "Drama na nebu iznad Prištine: Zavladala je panika, čuli su se vrsci i širio se gust crni dim";
+
+/* Class = "UINavigationItem"; title = "Molimo izaberite izvore novosti"; ObjectID = "Q4i-Oc-i6C"; */
+"Q4i-Oc-i6C.title" = "Molimo izaberite izvore novosti";
+
+/* Class = "UIButtonItem"; title = "U redu"; ObjectID = "3OO-cl-Spw"; */
+"3OO-cl-Spw.title" = "Završi";

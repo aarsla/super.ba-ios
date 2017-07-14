@@ -23,6 +23,116 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Please select news sources-->
+        <scene sceneID="mZl-MM-HbK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-89-GzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionViewController id="Ywg-3f-pN7" customClass="BoardingViewController" customModule="super" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eBG-HQ-Pwt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RrN-Zw-Z79">
+                            <size key="itemSize" width="320" height="60"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BoardingCell" id="FBk-id-TEn" customClass="BoardingCell" customModule="super" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Source" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I94-3e-g5Q">
+                                            <rect key="frame" x="99" y="10" width="100" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" white="0.1743197279" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News URL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeD-Cx-pM4">
+                                            <rect key="frame" x="99" y="29" width="100" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="Xck-e7-DVu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                            <color key="textColor" white="0.1743197279" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4nX-vF-b98">
+                                            <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="QHe-zQ-phh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0d-hY-I4p">
+                                            <rect key="frame" x="205" y="10" width="96" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="b0d-hY-I4p" firstAttribute="leading" secondItem="I94-3e-g5Q" secondAttribute="trailing" constant="6" id="8sq-Zi-mkF"/>
+                                    <constraint firstItem="I94-3e-g5Q" firstAttribute="leading" secondItem="OeD-Cx-pM4" secondAttribute="leading" id="9bf-TE-zNy"/>
+                                    <constraint firstItem="I94-3e-g5Q" firstAttribute="trailing" secondItem="OeD-Cx-pM4" secondAttribute="trailing" id="IcT-zU-taa"/>
+                                    <constraint firstItem="4nX-vF-b98" firstAttribute="leading" secondItem="FBk-id-TEn" secondAttribute="leadingMargin" constant="12" id="TvE-6o-TEB"/>
+                                    <constraint firstItem="4nX-vF-b98" firstAttribute="bottom" secondItem="b0d-hY-I4p" secondAttribute="bottom" id="Zor-aV-ZkP"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="OeD-Cx-pM4" secondAttribute="bottom" constant="8" id="c6g-uS-gxO"/>
+                                    <constraint firstItem="I94-3e-g5Q" firstAttribute="top" secondItem="b0d-hY-I4p" secondAttribute="top" id="cbQ-QE-dZB"/>
+                                    <constraint firstItem="I94-3e-g5Q" firstAttribute="leading" secondItem="4nX-vF-b98" secondAttribute="trailing" constant="39" id="kn7-Se-7SX"/>
+                                    <constraint firstItem="4nX-vF-b98" firstAttribute="top" secondItem="FBk-id-TEn" secondAttribute="topMargin" constant="2" id="mIg-zx-iuM"/>
+                                    <constraint firstItem="4nX-vF-b98" firstAttribute="centerY" secondItem="FBk-id-TEn" secondAttribute="centerY" id="qui-Bm-U4R"/>
+                                    <constraint firstItem="4nX-vF-b98" firstAttribute="top" secondItem="I94-3e-g5Q" secondAttribute="top" id="uau-OS-gK0"/>
+                                    <constraint firstItem="OeD-Cx-pM4" firstAttribute="top" secondItem="I94-3e-g5Q" secondAttribute="bottom" constant="3" id="w8M-ha-EoH"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="b0d-hY-I4p" secondAttribute="trailing" constant="11" id="yrm-Ft-hIG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="checkmarkLabel" destination="b0d-hY-I4p" id="zUN-xb-uGE"/>
+                                    <outlet property="logoImageView" destination="4nX-vF-b98" id="PaA-XM-ynG"/>
+                                    <outlet property="sourceTitleLabel" destination="I94-3e-g5Q" id="Yk7-xy-jhP"/>
+                                    <outlet property="urlTitleLabel" destination="OeD-Cx-pM4" id="CDp-na-oHV"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ywg-3f-pN7" id="mgV-YR-0YA"/>
+                            <outlet property="delegate" destination="Ywg-3f-pN7" id="J9n-Xx-JkL"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Please select news sources" id="Q4i-Oc-i6C">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="3OO-cl-Spw">
+                            <connections>
+                                <action selector="dismissController:" destination="Ywg-3f-pN7" id="Kul-ta-VrV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="3OO-cl-Spw" id="CDy-3U-5MD"/>
+                    </connections>
+                </collectionViewController>
+            </objects>
+            <point key="canvasLocation" x="1557.5999999999999" y="-1065.5172413793105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Zd-rc-07P">
+            <objects>
+                <navigationController storyboardIdentifier="Boarding" id="0cE-r0-Gtn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KfF-tA-HEh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ywg-3f-pN7" kind="relationship" relationship="rootViewController" id="c7f-EU-RQD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pme-pT-hxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-1066"/>
+        </scene>
         <!--News-->
         <scene sceneID="EP4-Mf-bW0">
             <objects>
@@ -346,7 +456,7 @@
                 <navigationController storyboardIdentifier="LeftMenu" id="2h8-6C-tGo" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mb7-HC-AjF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mb7-HC-AjF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -419,7 +529,7 @@
         <scene sceneID="QU2-yZ-Ib0">
             <objects>
                 <navigationController storyboardIdentifier="Articles" id="h3p-7g-nVm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A71-oR-n7l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A71-oR-n7l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -429,7 +539,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRm-dZ-3cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="-374"/>
+            <point key="canvasLocation" x="778" y="-376"/>
         </scene>
         <!--Article View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -489,7 +599,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="234"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="50Z-k8-Nd9">
-                                <rect key="frame" x="16" y="409" width="343" height="175"/>
+                                <rect key="frame" x="16" y="409" width="343" height="196.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                 <fontDescription key="fontDescription" name="Karma-Regular" family="Karma" pointSize="15"/>
                                 <nil key="textColor"/>

@@ -46,7 +46,7 @@ class MenuViewController: UITableViewController, SlideMenuControllerDelegate {
 extension MenuViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedSource = provider.sources[indexPath.row];
-        provider.addNewsFilter(source: selectedSource.title!)
+        provider.toggleNewsFilter(source: selectedSource.title!)
         tableView.reloadData()
     }
 }

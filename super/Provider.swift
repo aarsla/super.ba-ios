@@ -24,6 +24,7 @@ let filtersUpdateNotificationKey = "com.simpastudio.super.filtersUpdate"
 let websocketUpdateNotificationKey = "com.simpastudio.super.checkUpdate"
 let alertNotificationKey = "com.simpastudio.super.sourcesAlert"
 let websocketStatusNotificationKey = "com.simpastudio.super.socketChangeAlert"
+let configurationNeededNotificationKey = "com.simpastudio.super.configurationNeededNotificationKey"
 
 let netProtocol = "https"
 let netHost = "super.ba"
@@ -39,8 +40,7 @@ class Provider {
     static let sharedInstance = Provider()
     fileprivate let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "super.ba")
     var alamofireManager: SessionManager?
-
-    // Yes, these actually work.
+    
     let oauth2 = OAuth2ClientCredentials(settings: [
         "client_id": "5952144f7e664a87a18c158b_2fpcotn1f8n4so8oo8s4gwg8ogsgk8g48oksc044s0o4k0kow0",
         "client_secret": "34vrb64rxx8g8kc8s4ck8s4wocc4kcgkws4cookcocog0k8gcw",
@@ -75,12 +75,10 @@ class Provider {
         
         alamofireManager = sessionManager
         
-        //socket.disableSSLCertValidation = true
         socket.delegate = self
         socket.connect()
         reconnectTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(reconnectSocket), userInfo: nil, repeats: true)
 
-        loadNewsFilters()
         getSources()
     }
     
@@ -88,6 +86,12 @@ class Provider {
         if !socket.isConnected {
             socket.connect()
         }
+    }
+    
+    // MARK: - Configuration
+    
+    func isAppConfigured()->Bool {
+        return sources.count != filteredSources.count
     }
 
     // MARK: - Filters
@@ -98,14 +102,31 @@ class Provider {
         
         if filteredSources == nil {
             filteredSources = []
+            for source in sources {
+                filteredSources?.append(source.title!)
+            }
             defaults.set(filteredSources, forKey: "filteredSources")
+        }
+        
+        self.filteredSources = filteredSources!
+        
+        if !isAppConfigured() {
+            filteredSources = []
+            for source in sources {
+                filteredSources?.append(source.title!)
+            }
+
+            defaults.set(filteredSources, forKey: "filteredSources")
+            self.filteredSources = filteredSources!
+
+            NotificationCenter.default.post(name: Notification.Name(rawValue: configurationNeededNotificationKey), object: self)
         }
         
         self.filteredSources = filteredSources!
         setNewsFilters(sources: filteredSources!)
     }
     
-    func addNewsFilter(source: String) {
+    func toggleNewsFilter(source: String) {
         let defaults = UserDefaults.standard
         var filteredSources = defaults.stringArray(forKey: "filteredSources")
         
@@ -122,7 +143,6 @@ class Provider {
         
         self.filteredSources = uniqueSources
         setNewsFilters(sources: uniqueSources)
-        resetArticles()
     }
     
     func setNewsFilters(sources: [String]) {
@@ -131,7 +151,7 @@ class Provider {
         let paramsData = paramsString?.data(using: String.Encoding.utf8)
         self.filter = (paramsData?.base64EncodedString())!
         
-        NotificationCenter.default.post(name: Notification.Name(rawValue: newsUpdateNotificationKey), object: self)
+        resetArticles()
     }
     
     // MARK: - Sources
@@ -147,9 +167,9 @@ class Provider {
                     
                     if let sources = sourcesResponse?.sources {
                         self.sources = sources
+                        self.loadNewsFilters()
                         
                         NotificationCenter.default.post(name: Notification.Name(rawValue: sourcesUpdateNotificationKey), object: self)
-                        self.resetArticles()
                     }
                 }
             } else {
@@ -157,10 +177,6 @@ class Provider {
                 NotificationCenter.default.post(name: Notification.Name(rawValue: alertNotificationKey), object: self, userInfo: alertDataDict)
                 }
             }
-    }
-    
-    func forgetTokens() {
-        oauth2.forgetTokens()
     }
     
     // MARK: - Reachability
@@ -201,6 +217,10 @@ class Provider {
     
     func loadArticles(reset: Bool = false) {
 
+        if self.sources.isEmpty {
+            return;
+        }
+        
         let URL = "\(netProtocol)://\(netHost):\(netPort)/api/v1/articles"
         
         var parameters: Parameters = [

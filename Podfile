@@ -12,4 +12,5 @@ target 'super' do
   pod 'SlideMenuControllerSwift'
   pod 'Starscream', '~> 2.0.3'
   pod 'SwiftyJSON'
+#  pod 'SwipeCellKit'
 end

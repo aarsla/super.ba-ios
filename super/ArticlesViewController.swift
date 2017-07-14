@@ -50,6 +50,7 @@ class ArticlesViewController: UITableViewController, UISearchBarDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(showNewsUpdate), name: NSNotification.Name(rawValue: websocketUpdateNotificationKey), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showAlert), name: NSNotification.Name(rawValue: alertNotificationKey), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showWebsocketStatus), name: NSNotification.Name(rawValue: websocketStatusNotificationKey), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showOnboarding), name: NSNotification.Name(rawValue: configurationNeededNotificationKey), object: nil)
         
         provider.loadArticles()
     }
@@ -79,6 +80,13 @@ class ArticlesViewController: UITableViewController, UISearchBarDelegate {
         }
     }
 
+    func showOnboarding() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let boardingController = storyboard.instantiateViewController(withIdentifier: "Boarding")
+        navigationController?.modalPresentationStyle = .overCurrentContext
+        navigationController?.present(boardingController, animated: true, completion: nil)
+    }
+    
     func showAlert(notification: NSNotification) {
         if (notification.userInfo?["message"] as? String) != nil {
             let alert = UIAlertController(title: NSLocalizedString("Network Error", comment: "Network Error"), message: NSLocalizedString("Please try again", comment: "Please try again"), preferredStyle: UIAlertControllerStyle.alert)
@@ -148,6 +156,10 @@ class ArticlesViewController: UITableViewController, UISearchBarDelegate {
     }
 
     func scrollToTop() {
+        if (provider.articles.isEmpty) {
+            return
+        }
+        
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
@@ -205,8 +217,8 @@ extension ArticlesViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        let lastElement = provider.articles.count - 2
-        if indexPath.row == lastElement {
+        let loadingTriggerElement = provider.articles.count - 2
+        if indexPath.row == loadingTriggerElement {
             provider.loadArticles()
         }
     }

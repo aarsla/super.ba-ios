@@ -19,6 +19,8 @@
 		EF38F73E1EF2BCC300FF4DD2 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F73D1EF2BCC300FF4DD2 /* ArticleCell.swift */; };
 		EF38F7461EF40C8300FF4DD2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F7451EF40C8300FF4DD2 /* MenuViewController.swift */; };
 		EF534B411F04E8AF00C1AF8B /* DoubleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF534B401F04E8AF00C1AF8B /* DoubleCell.swift */; };
+		EF5D74C61F17AFD60052ACDB /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D74C51F17AFD60052ACDB /* BoardingViewController.swift */; };
+		EF5D74C81F17B0520052ACDB /* BoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D74C71F17B0520052ACDB /* BoardingCell.swift */; };
 		EF81B6D71EFA63EC003E4B2A /* Karma-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF81B6D21EFA63EC003E4B2A /* Karma-Bold.ttf */; };
 		EF81B6D81EFA63EC003E4B2A /* Karma-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF81B6D31EFA63EC003E4B2A /* Karma-Light.ttf */; };
 		EF81B6D91EFA63EC003E4B2A /* Karma-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF81B6D41EFA63EC003E4B2A /* Karma-Medium.ttf */; };
@@ -51,6 +53,8 @@
 		EF38F73D1EF2BCC300FF4DD2 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		EF38F7451EF40C8300FF4DD2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		EF534B401F04E8AF00C1AF8B /* DoubleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleCell.swift; sourceTree = "<group>"; };
+		EF5D74C51F17AFD60052ACDB /* BoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
+		EF5D74C71F17B0520052ACDB /* BoardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardingCell.swift; sourceTree = "<group>"; };
 		EF81B6D21EFA63EC003E4B2A /* Karma-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karma-Bold.ttf"; sourceTree = "<group>"; };
 		EF81B6D31EFA63EC003E4B2A /* Karma-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karma-Light.ttf"; sourceTree = "<group>"; };
 		EF81B6D41EFA63EC003E4B2A /* Karma-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karma-Medium.ttf"; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				EF38F73A1EF2A05F00FF4DD2 /* Classes */,
 				EFCC763C1EF32E4600BE4E4B /* Resources */,
 				EF38F7261EF29CFF00FF4DD2 /* AppDelegate.swift */,
+				EF5D74C51F17AFD60052ACDB /* BoardingViewController.swift */,
 				EF38F7281EF29CFF00FF4DD2 /* ArticlesViewController.swift */,
 				EF38F72A1EF29CFF00FF4DD2 /* ArticleViewController.swift */,
 				EF38F7451EF40C8300FF4DD2 /* MenuViewController.swift */,
@@ -144,6 +149,7 @@
 				EF38F73D1EF2BCC300FF4DD2 /* ArticleCell.swift */,
 				EF534B401F04E8AF00C1AF8B /* DoubleCell.swift */,
 				EF81B6F71EFABD34003E4B2A /* MenuCell.swift */,
+				EF5D74C71F17B0520052ACDB /* BoardingCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -307,11 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5D74C61F17AFD60052ACDB /* BoardingViewController.swift in Sources */,
 				EF38F73C1EF2A07000FF4DD2 /* Article.swift in Sources */,
 				EF38F72B1EF29CFF00FF4DD2 /* ArticleViewController.swift in Sources */,
 				EF534B411F04E8AF00C1AF8B /* DoubleCell.swift in Sources */,
 				EF38F73E1EF2BCC300FF4DD2 /* ArticleCell.swift in Sources */,
 				EF1A33891F0CD11F00B6FB4E /* Source.swift in Sources */,
+				EF5D74C81F17B0520052ACDB /* BoardingCell.swift in Sources */,
 				EFC35B4D1EF83E51005558D1 /* Provider.swift in Sources */,
 				EF38F7461EF40C8300FF4DD2 /* MenuViewController.swift in Sources */,
 				EF38F7271EF29CFF00FF4DD2 /* AppDelegate.swift in Sources */,

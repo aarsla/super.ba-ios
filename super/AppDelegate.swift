@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let slideMenuController = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
-        
+
         return true
     }
 
